@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace BatDongSan.Shared.Orchestration
 {
-    internal class Variable
+    public class Variable
     {
+        // lower case to generate JSON
+        public string Type { get; set; }
+        public object Value { get; set; }
+        public object ValueInfo { get; set; }
     }
 }

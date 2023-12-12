@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace BatDongSan.Shared.Orchestration
 {
-    internal class Deployment
+    public class Deployment
     {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string Source { get; set; }
+
+        public override string ToString() => $"Deployment [Id={Id}, Name={Name}]";
     }
 }

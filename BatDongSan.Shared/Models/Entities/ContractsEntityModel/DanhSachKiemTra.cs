@@ -1,12 +1,24 @@
-﻿using System;
+﻿using BatDongSan.Shared.Models.Entities.BaseEntityModel;
+using BatDongSan.Shared.Models.Entities.ClientsEntityModel;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BatDongSan.Shared.Models.Entities.ContractsEntityModel
 {
-    internal class DanhMuc
+    public class DanhSachKiemTra : BaseEntity
     {
+        public string TieuDe { get; set; }
+        public string MoTa { get; set; }
+        [ForeignKey("KhachHangId")]
+        public int KhachHangId { get; set; }
+        public KhachHang KhachHang { get; set; }
+        public int NhanVienId { get; set; }
+        public DateTime NgayBatDau { get; set; }
+        public DateTime NgayKetThuc { get; set; }
+        public int GiaoDichId { get; set; }
     }
 }

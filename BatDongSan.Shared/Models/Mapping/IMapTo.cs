@@ -6,7 +6,5 @@ using System.Threading.Tasks;
 
 namespace BatDongSan.Shared.Models.Mapping
 {
-    internal interface IMapTo
-    {
-    }
+    public interface IMapTo<TEntity> { }
 }

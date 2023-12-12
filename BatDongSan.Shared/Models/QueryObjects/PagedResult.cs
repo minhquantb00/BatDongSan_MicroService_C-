@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace BatDongSan.Shared.Models.QueryObjects
 {
-    internal class PagedResult
+    public class PagedResult<T>
     {
+        public IEnumerable<T>? Items { get; set; }
+
+        public int TotalItems { get; set; }
+
+        public int PageNumber { get; set; }
+
+        public int PageSize { get; set; }
     }
 }
